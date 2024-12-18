@@ -30,8 +30,8 @@ fun facto(x: Int = 10): Int {
     if (x == 0 || x == 1) return 1
     return x * facto(x - 1)
 }
-println(facto(5)) // Affiche 120
-println(facto()) // Affiche 3628800
+println(facto(5)) 
+println(facto()) 
 
 fun affiche_nombre_premier(x: Int) {
     var count = 0
