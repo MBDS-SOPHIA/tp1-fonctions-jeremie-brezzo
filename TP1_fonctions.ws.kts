@@ -1,4 +1,4 @@
-fun afficherNombresPairsOuImpairs(x: Int, pair: Boolean) {
+fun PairsouImpairs(x: Int, pair: Boolean) {
     var count = 0
     var num = if (pair) 0 else 1
 
@@ -8,10 +8,10 @@ fun afficherNombresPairsOuImpairs(x: Int, pair: Boolean) {
         count++
     }
 }
-afficherNombresPairsOuImpairs(5, true)
-afficherNombresPairsOuImpairs(5, false)
+PairsouImpairs(5, true)
+PairsouImpairs(5, false)
 
-fun afficherFibonacci(x: Int) {
+fun fibo(x: Int) {
     var a = 0
     var b = 1
     var count = 0
@@ -24,35 +24,35 @@ fun afficherFibonacci(x: Int) {
         count++
     }
 }
-afficherFibonacci(5)
+fibo(5)
 
-fun factoriel(x: Int = 10): Int {
+fun facto(x: Int = 10): Int {
     if (x == 0 || x == 1) return 1
-    return x * factoriel(x - 1)
+    return x * facto(x - 1)
 }
-println(factoriel(5)) // Affiche 120
-println(factoriel()) // Affiche 3628800
+println(facto(5)) // Affiche 120
+println(facto()) // Affiche 3628800
 
-fun afficherNombresPremiers(x: Int) {
+fun affiche_nombre_premier(x: Int) {
     var count = 0
     var num = 2
 
     while (count < x) {
-        if (estPremier(num)) {
+        if (est_premier(num)) {
             println(num)
             count++
         }
         num++
     }
 }
-fun estPremier(n: Int): Boolean {
+fun est_premier(n: Int): Boolean {
     if (n <= 1) return false
     for (i in 2..Math.sqrt(n.toDouble()).toInt()) {
         if (n % i == 0) return false
     }
     return true
 }
-afficherNombresPremiers(5)
+affiche_nombre_premier(5)
 
 
 
